@@ -48,13 +48,13 @@
 
 <style>
   .thumb {
-    width: 16px;
-    height: 16px;
+    width: var(--sliderThumbSize, 16px);
+    height: var(--sliderThumbSize, 16px);
     position: absolute;
     left: 0;
     top: 50%;
     border-radius: 50%;
-    background: var(--sliderPrimary);
+    background: var(--sliderThumb, var(--sliderSelected, var(--sliderPrimary)));
     touch-action: none;
     transform: translate(-50%, -50%);
     transition: .2s height, .2s width;
@@ -65,8 +65,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 32px;
-    height: 32px;
+    width: calc(var(--sliderThumbSize, 16px));
+    height: calc(var(--sliderThumbSize, 16px));
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
@@ -76,8 +76,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 32px;
-    height: 32px;
+    width: calc(var(--sliderThumbSize, 16px));
+    height: calc(var(--sliderThumbSize, 16px));
     border-radius: 50%;
     opacity: 0.3;
     background: var(--sliderSecondary);

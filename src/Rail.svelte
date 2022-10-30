@@ -10,8 +10,9 @@
 <style>
   .rail {
     position: relative;
-    height: 2px;
+    height: var(--sliderHeight, 2px);
     background: var(--sliderSecondary);
+    border-radius: var(--sliderRadius);
   }
 
   .selected {
@@ -20,6 +21,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--sliderPrimary);
+    background: var(--sliderSelected, var(--sliderPrimary));
   }
 </style>
